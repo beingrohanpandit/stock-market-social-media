@@ -250,3 +250,7 @@
 /home/vaven/RiderProjects/stock-market-social-media/WebApplication1/obj/Debug/net8.0/WebApplication1.pdb
 /home/vaven/RiderProjects/stock-market-social-media/WebApplication1/obj/Debug/net8.0/WebApplication1.genruntimeconfig.cache
 /home/vaven/RiderProjects/stock-market-social-media/WebApplication1/obj/Debug/net8.0/ref/WebApplication1.dll
+/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/Microsoft.AspNetCore.JsonPatch.dll
+/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/Newtonsoft.Json.dll
+/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
