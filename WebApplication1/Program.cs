@@ -1,9 +1,18 @@
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
+using WebApplication1.Configurations;
 using WebApplication1.Data;
+using WebApplication1.Dtos.Stock;
 using WebApplication1.Interface;
 using WebApplication1.Repository;
+using WebApplication1.Validations.Stocks;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var configuration = builder.Configuration;
+
+await ServiceConfigurations.Configure(builder.Services,configuration);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -25,11 +34,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
-// For Stocks
-builder.Services.AddScoped<IStockRepository, StockRepository>();
-
-// For Comments
-builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 
 var app = builder.Build();
 

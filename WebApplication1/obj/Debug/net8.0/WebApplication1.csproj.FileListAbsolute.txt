@@ -254,3 +254,6 @@
 /home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/Newtonsoft.Json.dll
 /home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/Newtonsoft.Json.Bson.dll
+/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/FluentValidation.dll
+/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll

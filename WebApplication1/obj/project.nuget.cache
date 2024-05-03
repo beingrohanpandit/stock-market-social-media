@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "MG6p8ZOoE3zZ8+FAG2nkmUZhDKiwW8Vgnu3Yd0twIiCAiyvFlD6IvuCpRYWrhqYgcMLDaoS3GpOJz7eiusAFOw==",
+  "dgSpecHash": "daQnTuEDs94R4v4jLwKC9L2E/qCikD6Envu33hT/sF4LalxqB0X+7gTjMQDqjBV9e4j9ARLy9IxXErq89dyZQw==",
   "success": true,
   "projectFilePath": "/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/WebApplication1.csproj",
   "expectedPackageFiles": [
+    "/home/vaven/.nuget/packages/fluentvalidation/11.9.1/fluentvalidation.11.9.1.nupkg.sha512",
+    "/home/vaven/.nuget/packages/fluentvalidation.aspnetcore/11.3.0/fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "/home/vaven/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.5.1/fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "/home/vaven/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/vaven/.nuget/packages/microsoft.aspnetcore.jsonpatch/8.0.4/microsoft.aspnetcore.jsonpatch.8.0.4.nupkg.sha512",
     "/home/vaven/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/8.0.4/microsoft.aspnetcore.mvc.newtonsoftjson.8.0.4.nupkg.sha512",

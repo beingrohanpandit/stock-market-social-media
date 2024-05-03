@@ -1,8 +1,10 @@
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Data;
 using WebApplication1.Dtos.Stock;
 using WebApplication1.Interface;
 using WebApplication1.Mappers;
+using WebApplication1.Validations.Stocks;
 
 namespace WebApplication1.Controllers;
 [Route("api/stock")]
@@ -11,12 +13,14 @@ public class StockController: ControllerBase
 {
     private readonly ApplicationDbContext _context;
     private readonly IStockRepository _stockRepo;
+    private readonly CreateStockValidation _createStockValidation;
     
     // Constructor takes Db Context from the ApplicationDbContext.
-    public StockController(ApplicationDbContext context, IStockRepository stockRepo)
+    public StockController(ApplicationDbContext context, IStockRepository stockRepo, CreateStockValidation createStockValidation)
     {
         this._context = context;
         this._stockRepo = stockRepo;
+        this._createStockValidation = createStockValidation;
     }
 
     // Get result.
@@ -45,6 +49,17 @@ public class StockController: ControllerBase
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateStockRequest stockDto)
     {
+        
+        // Validate the incoming request using FluentValidation
+        ValidationResult validationResult = _createStockValidation.Validate(stockDto);
+
+        // Check if validation fails
+        if (!validationResult.IsValid)
+        {
+            // If validation fails, return BadRequest with error messages
+            return BadRequest(validationResult.Errors);
+        }
+        
         var stockModel = stockDto.ToStockFromCreateDto();
         await _stockRepo.CreateAsync(stockModel);
         return CreatedAtAction(nameof(GetById), new { id = stockModel.Id }, stockModel.ToStockDto());
