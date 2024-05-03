@@ -17,14 +17,14 @@ public static class CommentMappers
         };
     }
 
-    public static Comment ToCreateCommentDto(this CreateCommentRequest commentModel)
+    public static Comment ToCreateCommentDto(this CreateCommentRequest commentModel, int stockId)
     {
         return new Comment
         {
             Title = commentModel.Title,
             Content = commentModel.Content,
-            CreatedOn = commentModel.CreatedOn,
-            StockId = commentModel.StockId
+            CreatedOn = DateTime.Now.ToUniversalTime(),
+            StockId = stockId
         };
     }
 }
