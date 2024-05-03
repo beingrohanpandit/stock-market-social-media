@@ -17,10 +17,7 @@ public class ServiceConfigurations
         // Register FluentValidation validators
         services.AddControllers()
             .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateStockValidation>());
-
         
-        // Repository Registrations
-        RegisterRepositoriesAndValidators(services);
         // For Stocks
         services.AddScoped<IStockRepository, StockRepository>();
 
@@ -28,11 +25,5 @@ public class ServiceConfigurations
         services.AddScoped<ICommentRepository, CommentRepository>();
 
         
-    }
-    private static void RegisterRepositoriesAndValidators(IServiceCollection services)
-    {
-        // Add validation
-        services.AddScoped<AbstractValidator<CreateStockRequest>, CreateStockValidation>();
-
     }
 }

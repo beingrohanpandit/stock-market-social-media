@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
-using WebApplication1.Dtos.Comment;
 using WebApplication1.Interface;
 using WebApplication1.Models;
 

@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Dtos.Comment;
 using WebApplication1.Interface;
 using WebApplication1.Mappers;
-using WebApplication1.Models;
 
 namespace WebApplication1.Controllers;
 

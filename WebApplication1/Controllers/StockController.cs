@@ -1,6 +1,5 @@
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
-using WebApplication1.Data;
 using WebApplication1.Dtos.Stock;
 using WebApplication1.Interface;
 using WebApplication1.Mappers;
