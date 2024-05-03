@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Dtos.Comment;
 using WebApplication1.Interface;
 using WebApplication1.Mappers;
+using WebApplication1.Models;
 
 namespace WebApplication1.Controllers;
 
@@ -62,6 +63,18 @@ public class CommentController: ControllerBase
         }
 
         return Ok(comment);
+    }
+
+    [HttpDelete]
+    [Route("{id}")]
+    public async Task<IActionResult> DeleteComment([FromRoute] int id)
+    {
+        var comment = await _commentRepo.DeleteCommentAsync(id);
+        if (comment == null)
+        {
+            return NotFound("Doesn't exist");
+        }
+        return NoContent();
     }
     
 }
