@@ -22,8 +22,5 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_Extensions_ApiDescription_Server Condition=" '$(PkgMicrosoft_Extensions_ApiDescription_Server)' == '' ">/home/vaven/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5</PkgMicrosoft_Extensions_ApiDescription_Server>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/home/vaven/.nuget/packages/microsoft.codeanalysis.analyzers/3.3.4</PkgMicrosoft_CodeAnalysis_Analyzers>
-    <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/home/vaven/.nuget/packages/microsoft.entityframeworkcore.tools/9.0.0-preview.3.24172.4</PkgMicrosoft_EntityFrameworkCore_Tools>
-    <PkgEntityFramework_Commands Condition=" '$(PkgEntityFramework_Commands)' == '' ">/home/vaven/.nuget/packages/entityframework.commands/7.0.0-beta4</PkgEntityFramework_Commands>
-    <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">/home/vaven/.nuget/packages/entityframework/7.0.0-beta4</PkgEntityFramework>
   </PropertyGroup>
 </Project>

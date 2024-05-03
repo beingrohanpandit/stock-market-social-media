@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
 using WebApplication1.Dtos.Stock;
 using WebApplication1.Mappers;
@@ -13,7 +14,7 @@ public class StockController: ControllerBase
     // Constructor takes Db Context from the ApplicationDbContext.
     public StockController(ApplicationDbContext context)
     {
-        _context = context;
+        this._context = context;
     }
 
     // Get result.
@@ -21,8 +22,8 @@ public class StockController: ControllerBase
     public async Task<IActionResult> GetAll()
     {
         var stocks = await _context.Stocks.ToListAsync();
-        var stockDto = stocks.Select(s => s.ToStockDto());
-        return Ok(stockDto);
+        var stockDtos = stocks.Select(s => s.ToStockDto());
+        return Ok(stockDtos);
     }
 
     // Get result by id.

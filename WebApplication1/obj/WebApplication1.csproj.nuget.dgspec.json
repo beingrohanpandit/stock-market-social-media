@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/vaven/RiderProjects/WebApplication1/WebApplication1/WebApplication1.csproj": {}
+    "/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/WebApplication1.csproj": {}
   },
   "projects": {
-    "/home/vaven/RiderProjects/WebApplication1/WebApplication1/WebApplication1.csproj": {
+    "/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/vaven/RiderProjects/WebApplication1/WebApplication1/WebApplication1.csproj",
+        "projectUniqueName": "/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "/home/vaven/RiderProjects/WebApplication1/WebApplication1/WebApplication1.csproj",
+        "projectPath": "/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/WebApplication1.csproj",
         "packagesPath": "/home/vaven/.nuget/packages/",
-        "outputPath": "/home/vaven/RiderProjects/WebApplication1/WebApplication1/obj/",
+        "outputPath": "/home/vaven/RiderProjects/stock-market-social-media/WebApplication1/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/vaven/.nuget/NuGet/NuGet.Config"
@@ -43,21 +43,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[7.0.0-beta4, )"
-            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.0-preview.3.24172.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
