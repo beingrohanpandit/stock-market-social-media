@@ -11,14 +11,12 @@ namespace WebApplication1.Controllers;
 [ApiController]
 public class StockController: ControllerBase
 {
-    private readonly ApplicationDbContext _context;
     private readonly IStockRepository _stockRepo;
     private readonly CreateStockValidation _createStockValidation;
     
     // Constructor takes Db Context from the ApplicationDbContext.
-    public StockController(ApplicationDbContext context, IStockRepository stockRepo, CreateStockValidation createStockValidation)
+    public StockController(IStockRepository stockRepo, CreateStockValidation createStockValidation)
     {
-        this._context = context;
         this._stockRepo = stockRepo;
         this._createStockValidation = createStockValidation;
     }
