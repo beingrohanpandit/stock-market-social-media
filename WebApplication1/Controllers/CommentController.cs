@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Data;
+using WebApplication1.Dtos.Comment;
 using WebApplication1.Interface;
 using WebApplication1.Mappers;
 
@@ -36,6 +37,14 @@ public class CommentController: ControllerBase
             return NotFound();
         }
         return Ok(comment.ToCommentDto());
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> CreateComment([FromBody] CreateCommentRequest commentDto)
+    {
+        var commentModel = commentDto.ToCreateCommentDto();
+        await _commentRepo.CreateCommentAsync(commentModel);
+        return CreatedAtAction(nameof(GetById), new { id = commentModel.Id }, commentModel.ToCommentDto());
     }
     
 }
