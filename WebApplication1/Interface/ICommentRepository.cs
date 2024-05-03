@@ -9,4 +9,6 @@ public interface ICommentRepository
     Task<Comment?> GetByIdAsync(int id);
 
     Task<Comment> CreateCommentAsync(Comment comment);
+
+    Task<Comment?> UpdateCommentAsync(int id,Comment comment);
 }

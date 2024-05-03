@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
+using WebApplication1.Dtos.Comment;
 using WebApplication1.Interface;
 using WebApplication1.Models;
 
@@ -27,6 +28,21 @@ public class CommentRepository: ICommentRepository
     public async Task<Comment> CreateCommentAsync(Comment comment)
     {
         await _context.Comments.AddAsync(comment);
+        await _context.SaveChangesAsync();
+        return comment;
+    }
+
+    public async Task<Comment?> UpdateCommentAsync(int id,Comment commentModel)
+    {
+        var comment = await _context.Comments.FirstOrDefaultAsync(c => c.Id == id);
+        if (comment == null)
+        {
+            return null;
+        }
+
+        comment.Title = commentModel.Title;
+        comment.Content = commentModel.Content;
+
         await _context.SaveChangesAsync();
         return comment;
     }

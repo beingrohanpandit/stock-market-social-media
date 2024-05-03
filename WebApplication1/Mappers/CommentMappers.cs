@@ -27,4 +27,13 @@ public static class CommentMappers
             StockId = stockId
         };
     }
+
+    public static Comment ToUpdateCommentDto(this UpdateCommentRequestDto commentModel)
+    {
+        return new Comment
+        {
+            Title = commentModel.Title,
+            Content = commentModel.Content
+        };
+    }
 }
