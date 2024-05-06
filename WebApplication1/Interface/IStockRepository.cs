@@ -1,11 +1,12 @@
 using WebApplication1.Dtos.Stock;
+using WebApplication1.Helpers;
 using WebApplication1.Models;
 
 namespace WebApplication1.Interface;
 
 public interface IStockRepository
 {
-    Task<List<Stock>> GetAllAsync();
+    Task<List<Stock>> GetAllAsync(QueryObj query);
 
     Task<Stock?> GetByIdAsync(int id);
 

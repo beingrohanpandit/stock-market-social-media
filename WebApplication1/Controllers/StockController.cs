@@ -1,6 +1,7 @@
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Dtos.Stock;
+using WebApplication1.Helpers;
 using WebApplication1.Interface;
 using WebApplication1.Mappers;
 using WebApplication1.Validations.Stocks;
@@ -22,9 +23,9 @@ public class StockController: ControllerBase
 
     // Get result.
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll([FromQuery] QueryObj query)
     {
-        var stocks = await _stockRepo.GetAllAsync();
+        var stocks = await _stockRepo.GetAllAsync(query);
         var stockDtos = stocks.Select(s => s.ToStockDto());
         return Ok(stockDtos);
     }
